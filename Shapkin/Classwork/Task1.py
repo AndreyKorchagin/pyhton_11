@@ -1,3 +1,4 @@
+print("Введите числа ")
 a = int(input())
 list_numbers = []
 
@@ -6,8 +7,9 @@ while (a != 0):
     a = int(input())
     list_numbers.append(a)
 list_numbers.remove(0)
-sum = 0
+min = 100000
 
 for number in list_numbers:
-    sum = sum + number
-print(sum)
+    if number < min:
+        min = number
+print(f"Минимальное число = {min}")
